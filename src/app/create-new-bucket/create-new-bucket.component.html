@@ -1,0 +1,29 @@
+<h4 style="margin: auto; width: 90%; padding: 10px;">Create New Bucket</h4>
+
+<div id='display_main'>
+	<h1 style="display:inline; font-size:25px; width:664px; text-align:left">Bucket Name*</h1>
+	<h1 style="display:inline; font-size:25px; width:664px; padding-left:428px">Bucket Location*</h1>
+	
+	<p></p>
+	
+	<input #bucket_name name="bucket_name" type="text" style="height:60px; width:450px; font-size:20px; text-align:center"
+		   placeholder="--- Enter Bucket Name ---" value=''/>
+
+	<select #bucket_location class="dropdown" name="bucket_location" style="height:60px; width:450px; font-size:20px;
+	text-align-last:center; margin-left:135px" placeholder="--- Enter Location ---" value='--- Select Location ---'>
+		<option *ngFor="let i of vse_lokacije" text={{i}}>{{i}}</option>
+	</select>
+		   
+	<h1></h1>
+	
+	<button id="create_bucket_btn" (click)="create_bucket(bucket_name.value, bucket_location.value, display)">Create Bucket</button>
+
+</div>
+
+<!--
+<p>
+  display_boolean: {{display}}<br>
+  bucket_name: {{bnam}}<br>
+  bucket_location: {{bloc}}
+</p>
+-->

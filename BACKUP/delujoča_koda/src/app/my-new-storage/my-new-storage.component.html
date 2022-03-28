@@ -1,0 +1,109 @@
+<h3>{{bckn}}</h3>
+
+<h4><br></h4>
+
+<!-- 
+***********************************************************************************************************
+1st * * * CREATE  DIRECTORY of FOLDERS with DIFFERENT FILES in path: src/assests
+     2nd * * * Iterate over directory folders and files in given folder and write data in secure_database.json file,
+	           located in src/assests.
+	 3rd * * * Use this json file for web page construction.
+***********************************************************************************************************
+-->
+
+<div style="margin:auto; ; padding:0px; width:90%">
+<button id="FILES_btn" (click)="files()">Files</button>
+<button id="DETAILS_btn" (click)="details()">Details</button>
+<button *ngIf="detailsSwitch" id="delete_bucket_btn" (click)="delete_bucket()">Delete Bucket</button>
+</div>
+
+<!----------------------------------------- FILES zavihek ------------------------------------------------->
+<div id='files' *ngIf="filesSwitch">
+	<h4 style="display:inline; font-size:15px ">{{all_files}}</h4>
+	<button id="delete_object_btn" (click)="deleteObject()">Delete Object</button>
+	
+	
+	<button id="upload_object_btn" (click)="uploadObject()">Upload Object
+	<input type="file" style="display:none" (change)="handle($event)"/></button>
+	
+	<!--
+	<p>ime datoteke:        {{xfile[0]}}       <br>
+	   datum sprememebe:    {{xfile[1]}}       <br>
+       dolzina datoteke:	{{xfile[2]}} B     <br>	
+	</p>
+	-->
+	
+<h2></h2>
+
+	<table style="display:inline-block; border: 4px solid blue;">
+			<tr style="display: inline; background-color: grey; padding:8px; border: 2px solid blue">
+				
+				<th style="width:440px; text-align:left">Name</th>
+				<th style="width:440px; text-align:center; padding-right:200px">Last modified</th>
+				<th style="width:440px; text-align:center; padding-right:228px">Size</th>
+	
+			</tr>
+			
+		<tr><td><h4></h4></td></tr>
+		
+		<h4>
+			<tr *ngFor="let i of new_filesList">
+				<td><img src="./assets/smiley.png" style="width:40px; height:40px; padding:0 0 0 50"/></td>
+				<td style="padding:0 0 0 60;">{{i.ime}}</td>
+				<td style="padding:0 0 0 370px;">{{i.lastmod}}</td>
+				<td style="padding:0 0 0 370px;">{{i.size}}</td>
+			</tr>
+			<!--
+			<tr>
+				<div *ngIf="xfile">
+				<td><img src="./assets/smiley.png" style="width:40px; height:40px; padding:0 0 0 50"/></td>
+				<td style="padding:0 0 0 60;">{{xfile[0]}}</td>
+				<td style="padding:0 0 0 370px;">{{xfile[1]}}</td>
+				<td style="padding:0 0 0 370px;">{{xfile[2]}}B</td>
+				</div>
+			</tr>
+			-->
+		</h4>
+</table>
+</div>
+<!------------------------------------------------------------------------------------------------------------->
+
+<!----------------------------------------- DETAILS zavihek --------------------------------------------------->
+
+<div id="details" *ngIf="detailsSwitch">
+
+<h4><br></h4>
+
+<table id="properties">
+	<tr>
+		<td><h1 style="width:300px; text-align:right">Bucket name:</h1></td>
+		<td><h1 style="width:100px;"></h1></td>
+		<td><h1 style="width:300px; text-align:left">{{bckn}}</h1></td>
+	</tr>
+	
+	<tr>
+		<td><h1 style="width:300px; text-align:right">Location:</h1></td>
+		<td><h1 style="width:100px;"></h1></td>
+		<td><h1 style="width:300px; text-align:left">{{bckl}}</h1></td>
+	</tr>
+	
+	<tr>
+		<td><h1 style="width:300px; text-align:right">Storage size:</h1></td>
+		<td><h1 style="width:100px;"></h1></td>
+		<td><h1 style="width:300px; text-align:left">4.9 GB</h1></td>
+	</tr>
+
+</table>
+
+<h1><br></h1>
+
+</div>
+
+
+<!--<h1>{{folders}}</h1>-->
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+h3{
+	color:blue;
+	font-size:30px;
+	padding-left:5%;
+}
+
+
+#display_main{
+	background-color: white;
+	margin: auto;
+    width: 90%;
+    /*border: 3px solid green;*/
+    padding: 10px;
+}
+
+#new_bucket_btn{
+	display:inline; 
+	width:16%; 
+	font-size:15px; 
+	color:#ccffcc; 
+	background-color:#009900;
+	margin-left: 77%;
+	padding: 5px;
+}
+
+#first_bucket_btn{
+	background-color:#ffffff;
+	border: white;
+}
+	

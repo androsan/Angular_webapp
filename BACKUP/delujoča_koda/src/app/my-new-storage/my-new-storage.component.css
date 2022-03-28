@@ -1,0 +1,72 @@
+h3{
+	color:blue;
+	font-size:30px;
+	padding-left:5%;
+}
+
+#files{
+	background-color: white;
+	margin: auto;
+    width: 90%;
+    /*border: 3px solid green;*/
+    padding: 10px;
+}
+
+#details{
+	background-color: white;
+	margin: auto;
+    width: 90%;
+    /*border: 3px solid green;*/
+    padding: 10px;
+}
+
+#FILES_btn{
+	background-color:white; 
+	border:white;
+	font-size: 25px;
+	width:110px;
+	height:50px;
+	
+}
+
+#DETAILS_btn{
+	background-color:#d8d8d8; 
+	border:#d8d8d8;
+	font-size: 25px;
+	width:110px;
+	height:50px;
+}
+
+#upload_object_btn{
+	display:inline; 
+	width:16%; 
+	font-size:15px; 
+	color:#ccffcc; 
+	background-color:#009900;
+	margin-left: 1%;
+	padding: 5px;
+}
+
+#delete_object_btn{
+	display:inline; 
+	width:16%; 
+	font-size:15px; 
+	color:#ffcccc; 
+	background-color:#990000;
+	margin-left: 60%;
+	padding: 5px;
+}
+
+#delete_bucket_btn{
+	display:inline; 
+	width:16%; 
+	font-size:15px; 
+	color:#ffcccc; 
+	background-color:#990000;
+	margin-left: 60%;
+	padding: 5px;
+}
+
+#properties h1 {
+	font-size:20px;
+}

@@ -1,0 +1,26 @@
+[
+
+{"ime":"BestStorage", "lokacija":"Kranj", "datoteke":
+
+	[
+
+	{"ime":"bs_FileName01", "lastmod":"06.09.2015", "size": "2MB"},
+
+	{"ime":"bs_FileName02", "lastmod":"05.01.2015", "size": "880KB"},
+
+	{"ime":"bs_FileName03", "lastmod":"12.11.2016", "size": "33MB"}
+
+	]},
+
+
+{"ime":"Big Giant Monster", "lokacija":"Ljubljana", "datoteke":
+
+    [
+
+	{"ime":"bgm_FileName71", "lastmod":"25.03.2004", "size": "67MB"},
+
+	{"ime":"bgm_FileName72", "lastmod":"05.01.2018", "size": "10KB"}
+
+	]}
+
+]

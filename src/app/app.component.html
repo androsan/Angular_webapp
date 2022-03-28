@@ -1,0 +1,11 @@
+<h1 class="naslov">{{title}}<span style="font-size:25px; vertical-align:top">&trade;</span></h1>
+<h4><br></h4>
+
+
+<app-my-new-storage *ngIf="add_bucket" [IND]="ind" [ADD_BUCKET]="add_bucket" [bckn]="ime_skladisca" [bckl]="ime_lokacije" [SEZ]="sez" [DOL]="dol_short" (txt_comp_output)="mainListener($event)" (my_new_storage_output)="getit($event)"></app-my-new-storage>     <!-- Add New Bucket Component -->
+
+
+<app-txt-comp *ngIf="bucket_list" [BUCKET_LIST]="bucket_list" [bckn]="ime_skladisca" [bckl]="ime_lokacije" [SEZ]="sez" [DOL]="dol_short" (txt_comp_output)="mainListener($event)" (my_new_storage_output)="getit($event)"></app-txt-comp> <!-- Bucket List Component -->
+
+
+<h1></h1>

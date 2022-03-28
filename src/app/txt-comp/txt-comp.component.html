@@ -1,0 +1,48 @@
+<h3>Bucket list</h3>
+ 
+<!-- *********************************************************************************************************-->
+
+<app-create-new-bucket *ngIf="currentDisplay" [display]="currentDisplay" (out)="displayListener($event)"></app-create-new-bucket>
+
+
+<h2></h2>
+
+<div id='display_main'>
+	<h4 style="display:inline; font-size:15px " *ngIf="!SEZ">{{dolzina}}</h4>
+	<h4 style="display:inline; font-size:15px " *ngIf="SEZ">{{DOL}}</h4>
+	<button id="new_bucket_btn" (click)="create_new_bucket()">Create New Bucket</button>
+	
+	<p></p>
+
+	<table style="display:inline-block; border: 4px solid blue;">
+			<tr style="display: inline; background-color: grey; padding:8px; border: 2px solid blue">
+				<!--<th style="padding:0 0 0 50;">Name</th>
+				<th style="padding:0 0 0 795px;">Location</th>	-->
+				<th style="width:664px; text-align:left">Name</th>
+				<th style="width:664px; text-align:center; padding-right:228px">Location</th>	
+			</tr>
+		<h4>
+		
+			<div *ngIf="!SEZ">
+			<tr *ngFor="let i of seznamList; let j = index" [attr.data-index]="j">
+			<td style="padding:0 0 0 50">
+				<button id="first_bucket_btn" (click)="my_new_storage(j)"><nav>{{i.ime}}</nav></button>
+			</td>
+			<td style="padding:0 0 0 750px;">{{i.lokacija}}</td>
+			</div>
+			
+			
+			<div *ngIf="SEZ">
+			<tr *ngFor="let i of SEZ; let j = index" [attr.data-index]="j">
+			<td style="padding:0 0 0 50">
+				<button id="first_bucket_btn" (click)="my_new_storage(j)"><nav>{{i.ime}}</nav></button>
+			</td>
+			<td style="padding:0 0 0 750px;">{{i.lokacija}}</td>
+			</div>	
+		</h4>
+</table>
+</div>
+
+<p *ngIf="ime" style="text-align:center; color:magenta">Bucket name: {{ime}} and location: {{lokacija}} will be written in JSON Secure Database.. Under development!</p>
+<!-- *********************************************************************************************************-->
+

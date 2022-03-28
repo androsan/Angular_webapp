@@ -1,0 +1,17 @@
+#display_main{
+	background-color: white;
+	margin: auto;
+    width: 90%;
+    /*border: 3px solid green;*/
+    padding: 10px;
+}
+
+#create_bucket_btn{
+	/*display:inline; */
+	width:16%; 
+	font-size:15px; 
+	color:#ccffcc; 
+	background-color:#009900;
+	/*margin-left: 77%;*/
+	padding: 5px;
+}

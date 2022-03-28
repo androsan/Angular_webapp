@@ -1,0 +1,12 @@
+<h1 class="naslov">{{title}}<span style="font-size:25px; vertical-align:top">&trade;</span></h1>
+<h4><br></h4>
+
+<div *ngIf="main_page">
+<app-txt-comp [main_page_trigger]="main_page" [bckn]="ime_skladisca" [bckl]="ime_lokacije" [SEZ]="sez" [DOL]="dol_short" (trig2)="mainListener($event)" (trig3)="getit($event)"></app-txt-comp> <!-- Bucket List Component -->
+</div>
+
+<div *ngIf="page_2">
+<app-my-new-storage [page_2_trigger]="page_2" [bckn]="ime_skladisca" [bckl]="ime_lokacije" [SEZ]="sez" [DOL]="dol_short" (trig2)="mainListener($event)" (trig3)="getit($event)"></app-my-new-storage>     <!-- My New Storage Component -->
+</div>
+
+<h1></h1>
